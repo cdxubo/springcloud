@@ -1,0 +1,4 @@
+GitRepositoriesView.GitDirectories=E\:\\code_workspace\\springcloud\\ribbon\\.git;E\:\\code_workspace\\springcloud\\redis_distrbutedLock\\.git;
+GitRepositoriesView.GitDirectories.relative=ribbon\\.git;redis_distrbutedLock\\.git;
+core_autoIgnoreDerivedResources=false
+eclipse.preferences.version=1

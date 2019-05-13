@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="CommitDialog.authorValues">
+		<item value="xu &lt;cdxubo&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="xu &lt;cdxubo&gt;"/>
+	</list>
+	<section name="GitCommitMessageComponent">
+		<list key="E:\code_workspace\springcloud\redis_distrbutedLock\.git">
+			<item value="false"/>
+			<item value="xu &lt;cdxubo&gt;"/>
+			<item value="Redis分布式锁"/>
+			<item value="xu &lt;cdxubo&gt;"/>
+			<item value="7617cc8898f98ce9e03536fa73fb8059c7b93947"/>
+			<item value="0"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item value="500,500" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="true" key="sortItemState"/>
+		<item value="500,500" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+	</section>
+</section>

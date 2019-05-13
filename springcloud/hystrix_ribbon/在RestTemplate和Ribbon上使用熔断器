@@ -1,0 +1,15 @@
+在RestTemplate和Ribbon上使用熔断器(实质是一个切面)的两个注解:
+	@EnableHystrix(启动类上)
+	@HystrixCommand(RestTemplate发送请求的方法上)
+
+1.	在spring boot启动类上添加@EnableHystrix注解开启Hystrix的熔断器功能
+2.	在RestTemplate发送请求的方法上添加@HystrixCommand注解,指定处理回退逻辑的方法fallbackMethod
+		eg. 
+			@HystrixCommand(fallbackMethod="hiError")
+			public String hi(String name){
+				return restTemplate.getForObject("http://eureka-client/hi?name="+name,String.class);
+			}
+			
+			public String hiError(String name){
+				return "hi,"+name+",sorry,error";
+			}

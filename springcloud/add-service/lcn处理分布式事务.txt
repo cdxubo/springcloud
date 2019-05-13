@@ -1,0 +1,9 @@
+
+1.	修改application.properties,启动部署Tx-Manager(TM),一个jar包tx-manager-4.1.0.jar——————相当于server端
+
+2.	在代码中配置Tx-Client(TC)————相当于client端
+		2.1	   添加依赖
+		2.2      添加配置文件(add-service和decrease-service都添加tx.properties文件)
+		2.3      修改数据源，即重新配置数据源(add-service和decrease-service都需要配置)
+		2.4      在事务发起的方法(add-service)上添加注解@TxTransaction(isStarted=true)
+		2.5      在事务参与的方法(decrease-service)上添加注解(@TxTranscation)

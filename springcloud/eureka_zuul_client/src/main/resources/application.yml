@@ -1,0 +1,24 @@
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:8761/eureka/
+      
+server:
+  port: 5000
+  
+spring:
+  application:
+    name: service-zuul
+    
+zuul:
+  routes:
+    hiapi:  # 以/hiapi开头的URL路由到eureka-client服务       http://localhost:5000/hiapi/hi?name=xu
+      path: /hiapi/**
+      service-id: eureka-client
+    ribbonapi:  # 以/ribbonapi开头的URL路由到eureka-ribbon-client服务      http://localhost:5000/ribbonapi/hi?name=ribbon
+      path: /ribbonapi/**
+      service-id: eureka-ribbon-client
+    feignapi: # 以/feignapi开头的URL路由到eureka-feign-client服务       http://localhost:5000/feignapi/hi?name=feign
+      path: /feignapi/**
+      service-id: eureka-feign-client
+  prefix: /v1  # 配置zuul.prefix后,所有请求都加上了前缀v1 http://localhost:5000/v1/feignapi/hi?name=feign
